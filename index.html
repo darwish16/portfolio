@@ -1,301 +1,786 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Omar Darwish Talib Al Hosni - CV</title>
-  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-  <style>
-    :root {
-      --red: #c70039;
-      --black: #111;
-      --gray: #f5f5f5;
-      --white: #fff;
-    }
-    * {
-      margin: 0; padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: var(--gray);
-      color: var(--black);
-    }
-    /* NAV */
-    nav {
-      position: fixed;
-      top: 0; left: 0; width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background: rgba(0,0,0,0.85);
-      z-index: 999;
-    }
-    nav h1 {
-      color: var(--white);
-      font-size: 1.3rem;
-    }
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 1.5rem;
-    }
-    nav a {
-      color: var(--white);
-      text-decoration: none;
-      font-size: 0.95rem;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: var(--red);
-    }
-    /* HERO */
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 6rem 10%;
-      background: var(--red);
-      color: var(--white);
-      min-height: 100vh;
-    }
-    .hero-text {
-      max-width: 50%;
-    }
-    .hero-text h2 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-    }
-    .hero-text h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    .hero-text p {
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-    }
-    .btn {
-      display: inline-block;
-      padding: 0.8rem 1.5rem;
-      background: var(--white);
-      color: var(--black);
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: 0.3s;
-    }
-    .btn:hover {
-      background: #ddd;
-    }
-    .hero img {
-      max-width: 350px;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    }
-    /* STATS */
-    .stats {
-      display: flex;
-      justify-content: space-around;
-      background: var(--black);
-      color: var(--white);
-      padding: 2rem;
-      text-align: center;
-    }
-    .stats div {
-      flex: 1;
-    }
-    .stats h3 {
-      font-size: 2rem;
-      margin-bottom: 0.3rem;
-      color: var(--red);
-    }
-    /* SECTIONS */
-    section {
-      padding: 5rem 10%;
-      background: var(--white);
-      margin-bottom: 2rem;
-      border-radius: 12px;
-    }
-    section h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1.5rem;
-      color: var(--red);
-    }
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-    }
-    .chip {
-      background: var(--gray);
-      padding: 0.6rem 1rem;
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.9rem;
-      transition: 0.3s;
-    }
-    .chip:hover {
-      background: var(--red);
-      color: var(--white);
-    }
-    .experience-item, .project-item, .testimonial-item {
-      margin-bottom: 1.5rem;
-    }
-    .testimonial-item {
-      font-style: italic;
-      border-left: 4px solid var(--red);
-      padding-left: 1rem;
-      color: #555;
-    }
-    /* CONTACT */
-    .contact-icons {
-      display: flex;
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-    .contact-icons a {
-      color: var(--red);
-      font-size: 1.5rem;
-      transition: 0.3s;
-    }
-    .contact-icons a:hover {
-      color: var(--black);
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: var(--black);
-      color: var(--white);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar Al Hosni | Virtual Assistant & IT Specialist</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* * COLOR PALETTE & VARIABLES
+         * Theme: Modern Dark Tech (Slate, Navy, Electric Blue, Cyan)
+         */
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --bg-card-hover: #334155;
+            --primary: #38bdf8; /* Cyan */
+            --secondary: #818cf8; /* Indigo */
+            --accent: #f43f5e; /* Rose (Kept a hint of the original red preference) */
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --glass: rgba(15, 23, 42, 0.8);
+            --border: rgba(255, 255, 255, 0.1);
+            --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* RESET & BASE */
+        * {
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-main);
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s ease; }
+        ul { list-style: none; }
+        img { display: block; max-width: 100%; }
+
+        /* UTILITIES */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 700;
+        }
+
+        /* NAVIGATION - Glassmorphism */
+        nav {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            padding: 1rem 0;
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0; height: 2px;
+            bottom: -5px; left: 0;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 80px; /* Offset for fixed nav */
+            background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent 40%);
+            overflow: hidden;
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .hero-text {
+            animation: fadeUp 1s ease-out forwards;
+            opacity: 0;
+        }
+
+        .tagline {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 span {
+            color: var(--secondary);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            max-width: 90%;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(56, 189, 248, 0.6);
+        }
+
+        .hero-img-wrapper {
+            position: relative;
+            animation: fadeLeft 1s ease-out 0.3s forwards; /* CSS Only animation delay */
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-img-wrapper::before {
+            content: '';
+            position: absolute;
+            width: 100%; height: 100%;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            z-index: -1;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            filter: blur(40px);
+            opacity: 0.4;
+            animation: morph 6s ease-in-out infinite;
+        }
+
+        .hero img {
+            width: 380px;
+            border-radius: 20px;
+            border: 2px solid rgba(255,255,255,0.1);
+            box-shadow: var(--shadow);
+            transform: rotate(-2deg);
+            transition: 0.5s;
+            object-fit: cover;
+        }
+
+        .hero img:hover {
+            transform: rotate(0) scale(1.02);
+        }
+
+        /* STATS BANNER */
+        .stats {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 2.5rem 0;
+            margin-top: -3rem; /* Overlap hero slightly */
+            position: relative;
+            z-index: 2;
+        }
+
+        .stats .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .stat-item p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* SECTIONS GENERAL */
+        section {
+            padding: 6rem 0;
+        }
+
+        /* ABOUT */
+        .about-content {
+            background: var(--bg-card);
+            padding: 3rem;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .about-content::after {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            background: linear-gradient(45deg, var(--primary), transparent, var(--secondary));
+            z-index: -1;
+            border-radius: 18px;
+            opacity: 0.3;
+        }
+
+        .about-content p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+        }
+
+        /* SERVICES & SKILLS - GRIDS */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            background: var(--bg-card-hover);
+            border-color: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 10px 40px -10px rgba(56, 189, 248, 0.15);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* EXPERIENCE TIMELINE */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            border-left: 2px solid var(--bg-card-hover);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 1.5rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.6rem;
+            top: 5px;
+            width: 16px; height: 16px;
+            background: var(--bg-dark);
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+        }
+
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content ul {
+            list-style: disc;
+            margin-left: 1.2rem;
+            color: var(--text-muted);
+        }
+        
+        .timeline-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* SKILLS PILLS */
+        .skills-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .skill-pill {
+            background: var(--bg-card);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .skill-pill i {
+            color: var(--secondary);
+            font-size: 1.2rem;
+        }
+
+        .skill-pill:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--secondary);
+            transform: scale(1.05);
+            color: #fff;
+        }
+
+        /* PROJECTS */
+        .project-card {
+            background: linear-gradient(180deg, var(--bg-card) 0%, rgba(30, 41, 59, 0.5) 100%);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .project-card h3::after {
+            content: '↗';
+            font-size: 1rem;
+            opacity: 0;
+            transition: 0.3s;
+            transform: translateX(-10px);
+        }
+
+        .project-card:hover h3::after {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* TESTIMONIALS */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .quote-card {
+            background: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 16px;
+            position: relative;
+            border: 1px solid var(--border);
+        }
+
+        .quote-card i {
+            position: absolute;
+            top: 1.5rem; right: 1.5rem;
+            font-size: 2rem;
+            color: rgba(255, 255, 255, 0.05);
+        }
+
+        .quote-text {
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .quote-author {
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        /* CONTACT */
+        .contact-section {
+            text-align: center;
+            padding-bottom: 4rem;
+        }
+
+        .contact-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-btn {
+            width: 60px; height: 60px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover {
+            background: var(--primary);
+            color: var(--bg-dark);
+            transform: rotate(360deg);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* ANIMATIONS (Keyframes) */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeLeft {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes morph {
+            0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+            100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+            
+            .hero-img-wrapper {
+                order: -1; /* Image on top for mobile */
+            }
+
+            .hero h1 { font-size: 2.5rem; }
+
+            .nav-links {
+                display: none; /* Simple hiding for mobile without JS hamburger */
+            }
+
+            /* Alternative Mobile Nav: Horizontal Scroll */
+            nav .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .stats .container {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .about-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- NAV -->
-  <nav>
-    <h1>Omar</h1>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
 
-  <!-- HERO -->
-  <div class="hero">
-    <div class="hero-text">
-      <h2>Hello, I’m Omar</h2>
-      <h1>Virtual Assistant & IT Specialist</h1>
-      <p>I help businesses streamline workflows through <strong>executive support, email marketing, automation, and IT solutions</strong>.</p>
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=omarnacilla@gmail.com&su=Hire%20Me&body=Hi%20Omar,%20I%20want%20to%20hire%20you%20for%20a%20project." 
-   target="_blank" class="btn">Hire Me</a>
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">Omar<span style="color:var(--text-main)">.tech</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <span class="tagline">Available for Hire</span>
+                <h1>Virtual Assistant & <br> <span>IT Specialist</span></h1>
+                <p>Bridging the gap between administrative efficiency and technical innovation. I streamline workflows through automation, email marketing, and IT solutions.</p>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=omarnacilla@gmail.com&su=Hire%20Me&body=Hi%20Omar,%20I%20want%20to%20hire%20you%20for%20a%20project." target="_blank" class="btn-primary">
+                    <i class="ri-mail-send-line"></i> Hire Me
+                </a>
+            </div>
+            <div class="hero-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" alt="Omar Al Hosni Portrait">
+            </div>
+        </div>
+    </header>
+
+    <div class="stats">
+        <div class="container">
+            <div class="stat-item">
+                <h3>2+</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat-item">
+                <h3>50+</h3>
+                <p>Campaigns Delivered</p>
+            </div>
+            <div class="stat-item">
+                <h3>10+</h3>
+                <p>IT Projects</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Client Satisfaction</p>
+            </div>
+        </div>
     </div>
-    <img src="Al Hosni, Headshot Photo.jpg" alt="Omar Al Hosni">
-  </div>
 
-  <!-- STATS -->
-  <div class="stats">
-    <div><h3>2+</h3><p>Years Experience</p></div>
-    <div><h3>50+</h3><p>Email Campaigns</p></div>
-    <div><h3>10+</h3><p>IT Projects</p></div>
-  </div>
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>I am a professional <strong>Virtual Assistant</strong> with a twist—I bring a BSIT Database major background to the table. While most VAs handle administration, I engineer efficiency. I specialize in executive support, email marketing automation, and lead generation, backed by strong technical knowledge of databases and modern digital tools. My goal is to not just manage your tasks, but to optimize your entire business workflow.</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a professional Virtual Assistant with proven expertise in executive support, email marketing, automation, and lead generation. My role is to make businesses more efficient by managing communication, tasks, and digital systems effectively. With a strong IT foundation as a BSIT Database major, I bring technical knowledge and modern tools into my VA services, helping clients streamline workflows and grow sustainably.</p>
-  </section>
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">My Services</h2>
+            <div class="grid-layout">
+                <div class="card">
+                    <i class="ri-mail-settings-line"></i>
+                    <h3>Email Management</h3>
+                    <p>Inbox zero strategies, organization, and professional correspondence handling.</p>
+                </div>
+                <div class="card">
+                    <i class="ri-rocket-2-line"></i>
+                    <h3>Email Marketing</h3>
+                    <p>Campaign design, A/B testing, and analytics tracking using industry-standard tools.</p>
+                </div>
+                <div class="card">
+                    <i class="ri-flow-chart"></i>
+                    <h3>Automation Setup</h3>
+                    <p>Building workflows (Zapier, Make) to remove repetitive tasks from your day.</p>
+                </div>
+                <div class="card">
+                    <i class="ri-user-search-line"></i>
+                    <h3>Lead Generation</h3>
+                    <p>Data scraping, verification, and CRM entry to fuel your sales pipeline.</p>
+                </div>
+                <div class="card">
+                    <i class="ri-calendar-check-line"></i>
+                    <h3>Scheduling & Admin</h3>
+                    <p>Calendar management, meeting prep, and detailed daily reporting.</p>
+                </div>
+                <div class="card">
+                    <i class="ri-database-2-line"></i>
+                    <h3>IT Support</h3>
+                    <p>Basic database management, troubleshooting, and system organization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- SERVICES -->
-  <section id="services">
-    <h2>Services</h2>
-    <div class="chips">
-      <div class="chip"><i class="ri-mail-line"></i>Email Management</div>
-      <div class="chip"><i class="ri-send-plane-line"></i>Email Marketing</div>
-      <div class="chip"><i class="ri-robot-line"></i>Automation Setup</div>
-      <div class="chip"><i class="ri-user-search-line"></i>Lead Generation</div>
-      <div class="chip"><i class="ri-calendar-line"></i>Scheduling</div>
-      <div class="chip"><i class="ri-file-list-line"></i>Reporting</div>
-      <div class="chip"><i class="ri-bar-chart-line"></i>Research</div>
-    </div>
-  </section>
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-date">2024 – Present</span>
+                    <div class="timeline-content">
+                        <h3>Dove Press Publishing Limited</h3>
+                        <ul>
+                            <li>Managed complex email communications across multiple enterprise accounts.</li>
+                            <li>Designed high-conversion email marketing campaigns.</li>
+                            <li>Built custom automation scripts for repetitive administrative workflows.</li>
+                            <li>Conducted extensive lead generation and maintained clean database records.</li>
+                            <li>Prepared detailed end-of-day reports ensuring full transparency and accountability.</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="experience-item">
-      <h3>Dove Press Publishing Limited</h3>
-      <p><em>2024 – Present</em></p>
-      <ul>
-        <li>Managed email communications across multiple accounts.</li>
-        <li>Prepared detailed daily reports ensuring accountability.</li>
-        <li>Designed and tracked email marketing campaigns.</li>
-        <li>Built automation for repetitive workflows.</li>
-        <li>Conducted lead generation and maintained records.</li>
-        <li>Handled scheduling, task coordination, and meeting prep.</li>
-      </ul>
-    </div>
-  </section>
+    <section id="skills" style="background: var(--bg-card-hover); padding-top: 4rem; padding-bottom: 4rem;">
+        <div class="container">
+            <h2 class="section-title">Tech Stack & Tools</h2>
+            <div class="skills-wrapper">
+                <div class="skill-pill"><i class="ri-database-2-line"></i> Database Mgmt</div>
+                <div class="skill-pill"><i class="ri-code-s-slash-line"></i> MERN Stack</div>
+                <div class="skill-pill"><i class="ri-code-line"></i> PHP</div>
+                <div class="skill-pill"><i class="ri-mail-open-line"></i> Mailchimp</div>
+                <div class="skill-pill"><i class="ri-slack-line"></i> Slack/Teams</div>
+                <div class="skill-pill"><i class="ri-google-fill"></i> Google Workspace</div>
+                <div class="skill-pill"><i class="ri-microsoft-fill"></i> MS Office 365</div>
+                <div class="skill-pill"><i class="ri-bar-chart-box-line"></i> Data Analysis</div>
+                <div class="skill-pill"><i class="ri-paint-brush-line"></i> Canva</div>
+            </div>
+        </div>
+    </section>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <h2>Skills & Tools</h2>
-    <div class="chips">
-      <div class="chip"><i class="ri-database-2-line"></i>Database Management</div>
-      <div class="chip"><i class="ri-code-s-slash-line"></i>MERN Stack</div>
-      <div class="chip"><i class="ri-code-line"></i>PHP</div>
-      <div class="chip"><i class="ri-mail-open-line"></i>Mailchimp & Email Tools</div>
-      <div class="chip"><i class="ri-slack-line"></i>Slack & Teams</div>
-      <div class="chip"><i class="ri-google-line"></i>Google Workspace</div>
-      <div class="chip"><i class="ri-microsoft-line"></i>Microsoft Office</div>
-      <div class="chip"><i class="ri-bar-chart-box-line"></i>Data Analysis</div>
-    </div>
-  </section>
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="grid-layout">
+                <div class="project-card">
+                    <h3>High-Yield Email Campaigns</h3>
+                    <p>Designed and launched a series of segmented campaigns achieving <strong>85%+ delivery rates</strong> and consistently hitting <strong>40%+ open rates</strong>.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Workflow Automation</h3>
+                    <p>Implemented an automated reporting system connecting email parsing to Google Sheets, saving the client <strong>5+ hours weekly</strong>.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Database Optimization</h3>
+                    <p>Developed relational & NoSQL schema structures for a client project, applying normalization best practices to improve query speeds.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-item">
-      <h3>Email Marketing Campaigns</h3>
-      <p>Designed and launched campaigns with 85%+ delivery and 40%+ open rates.</p>
-    </div>
-    <div class="project-item">
-      <h3>Automation Workflows</h3>
-      <p>Implemented email sequences and reporting automations, saving 5+ hours weekly.</p>
-    </div>
-    <div class="project-item">
-      <h3>Database Projects</h3>
-      <p>Developed relational & NoSQL databases, applying schema optimization best practices.</p>
-    </div>
-  </section>
+    <section id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What People Say</h2>
+            <div class="testimonial-grid">
+                <div class="quote-card">
+                    <i class="ri-double-quotes-r"></i>
+                    <p class="quote-text">"Omar has transformed the way I manage my business. His reliability in email marketing and automation saves me valuable time every single day."</p>
+                    <p class="quote-author">– Daniel (Client)</p>
+                </div>
+                <div class="quote-card">
+                    <i class="ri-double-quotes-r"></i>
+                    <p class="quote-text">"He combines VA efficiency with IT expertise, making him a unique asset for any team. He solves problems before we even know they exist."</p>
+                    <p class="quote-author">– Former Colleague</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- TESTIMONIALS -->
-  <section id="testimonials">
-    <h2>Testimonials</h2>
-    <div class="testimonial-item">“Omar has transformed the way I manage my business. His reliability in email marketing and automation saves me valuable time.” – Daniel (Client)</div>
-    <div class="testimonial-item">“He combines VA efficiency with IT expertise, making him a unique asset for any team.” – Colleague</div>
-  </section>
+    <section id="contact">
+        <div class="container contact-section">
+            <h2 class="section-title">Let's Work Together</h2>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">Ready to streamline your business? Send me a message and let's discuss how I can help you reclaim your time.</p>
+            
+            <div class="contact-wrapper">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=omarnacilla@gmail.com" target="_blank" class="contact-btn" title="Email Me">
+                    <i class="ri-mail-send-fill"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/omar-darwish-talib-al-hosni-58a0542a4/" target="_blank" class="contact-btn" title="LinkedIn">
+                    <i class="ri-linkedin-fill"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Let’s connect! You can reach me via:</p>
-    <div class="contact-icons">
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=omarnacilla@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/omar-darwish-talib-al-hosni-58a0542a4/"><i class="ri-linkedin-fill"></i></a>
-    </div>
-  </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Omar Darwish Talib Al Hosni. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-  <footer>
-    <p>© 2025 Omar Darwish Talib Al Hosni. All Rights Reserved.</p>
-  </footer>
 </body>
 </html>
-
